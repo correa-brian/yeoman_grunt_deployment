@@ -353,6 +353,7 @@ module.exports = function (grunt) {
         'svgmin'
       ]
     },
+
 buildcontrol: {
     options: {
       dir: 'dist',
@@ -380,7 +381,8 @@ buildcontrol: {
       }
     }
   }
-  });
+
+});
 
 
   grunt.registerTask('serve', 'start the server and preview your app', function (target) {
