@@ -354,35 +354,35 @@ module.exports = function (grunt) {
       ]
     },
 
-buildcontrol: {
-    options: {
-      dir: 'dist',
-      commit: true,
-      push: true,
-      message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-    },
-    pages: {
+    buildcontrol: {
       options: {
-        remote: 'git@github.com:correa-brian/yeoman_grunt_deployment.git',
-        branch: 'gh-pages'
-      }
-    },
-    heroku: {
-      options: {
-        remote: 'git@heroku.com:example-heroku-webapp-1988.git',
-        branch: 'master',
-        tag: pkg.version
-      }
-    },
-    local: {
-      options: {
-        remote: '../',
-        branch: 'build'
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:correa-brian/yeoman_grunt_deployment.git',
+          branch: 'gh-pages'
+        }
+      },
+      heroku: {
+        options: {
+          remote: 'git@heroku.com:example-heroku-webapp-1988.git',
+          branch: 'master',
+          tag: pkg.version
+        }
+      },
+      local: {
+        options: {
+          remote: '../',
+          branch: 'build'
+        }
       }
     }
-  }
 
-});
+  });
 
 
   grunt.registerTask('serve', 'start the server and preview your app', function (target) {
